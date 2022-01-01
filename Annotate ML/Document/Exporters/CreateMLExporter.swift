@@ -62,7 +62,8 @@ class CreateMLExporter: DocumentExporter {
 			let photoName = object.photoFilename!
 			let filename = outputDirectory
 				.appendingPathComponent(photoName).path
-			
+            print(filename)
+
 			if fileURL != nil {
 				// if the project is already saved, we'll just copy
 				// the files from our package to the selected folder

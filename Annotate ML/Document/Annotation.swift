@@ -52,11 +52,11 @@ class Annotation: NSObject, NSSecureCoding {
 	
 	/// A representation of this object in JSON form
 	var json: [String: Any] {
-		get {
-			["x": x, "y": y, "width": w, "height": h]
-		}
-	}
-	
+        get {
+            ["x": x + w/2, "y": y + h/2, "width": w, "height": h]
+        }
+    }
+
 	// MARK: NSCoding
 	
 	required init?(coder: NSCoder) {
